@@ -1,5 +1,5 @@
 // FIXME Assurez vous que ces deux variables contiennent bien les bonnes choses ;-)
-let player = $('.player__video').first();
+let player = $("#myVideo")
 let progress = $('.progress__filled').first();
 let play = $(".player__button").first();
 let playPause = 0;
@@ -16,6 +16,8 @@ play.click(function () {
     }
 });
 
-player.addEventListener("timeupdate", function (){
-
-});
+//Pas fini
+player.get(0).ontimeupdate = function (){
+    let progressTime = player.get(0).currentTime;
+    progress.animate({left: "+=10%"}, progressTime);
+};
