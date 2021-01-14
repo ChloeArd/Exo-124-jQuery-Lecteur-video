@@ -19,5 +19,5 @@ play.click(function () {
 //Pas fini
 player.get(0).ontimeupdate = function (){
     let progressTime = player.get(0).currentTime;
-    progress.animate({left: "+=30%"}, progressTime);
+    progress.animate({left: "+=10%"}, progressTime);
 };
